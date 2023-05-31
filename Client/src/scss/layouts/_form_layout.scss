@@ -1,0 +1,40 @@
+form{
+    width: 100%;
+}
+
+.group-section{
+    width: 100%;
+    margin-bottom: 30px;
+    label{
+        display: block;
+        margin-bottom: 10px;
+        font-size: 16px;
+        font-family: $font-one;
+        font-weight: bold;
+    }
+    input{
+        width: 100%;
+        height: 40px;
+        background-color: #e5e4e4;
+        border: none;
+        outline: none;
+        border-radius: 5px;
+        padding: 10px;
+    }
+}
+
+.group-section{
+    textarea{
+        width: 100%;
+        background-color: #e5e4e4;
+        border: none;
+        outline: none;
+        border-radius: 5px;
+        padding: 10px;
+        resize: none;
+    }
+}
+
+.form-buttons{
+    
+}

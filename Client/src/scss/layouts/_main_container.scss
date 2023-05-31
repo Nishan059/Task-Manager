@@ -1,0 +1,14 @@
+.dashboard{
+    position: relative;
+    width: 100%;
+    // border: 1px solid black;
+    .title{
+        margin-bottom: 50px;
+    }
+    .main-container{
+        position: inherit;
+        padding: 20px;
+        left: 300px;
+        width: calc(100% - 300px); 
+    }
+}

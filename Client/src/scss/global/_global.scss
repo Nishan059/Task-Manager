@@ -1,0 +1,45 @@
+
+
+.container{
+    width: 1200px;
+    height: auto;
+    margin: 0 auto;
+}
+
+.h2-title{
+    font-size: 25px;
+    font-family: $font-one;
+}
+
+.form-button{
+    width: 100%;
+    background-color: $primary-color;
+    color: #fff;
+    height: 50px;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.warning-action{
+    color: rgb(255, 117, 117);
+    font-size: 14px;
+}
+.btn{
+    padding: 5px;
+}
+.btn-primary{
+    background-color: $primary-color;
+    border: none;
+    outline: none;
+    color: #fff;
+    cursor: pointer;
+}
+
+.btn-warning{
+    background-color: rgb(255, 117, 117);
+    border: none;
+    outline: none;
+    color: #fff;
+    cursor: pointer;
+}

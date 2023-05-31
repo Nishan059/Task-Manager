@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Manager System</title>
+    <link rel="stylesheet" href="./src/css/main.css">
+</head>
+<body>
+    <div class="dashboard">
+        <div class="sidebar">
+            <div class="title">
+                <h2 class="h2-title">Octo Board</h2>
+            </div>
+            <div class="components">
+                <ul>
+                    <li><a href="#">Tasks</a></li>
+                    <li><a href="#">Create Task</a></li>
+                    <li><a href="#">Tasks Satus</a>
+                        <ol class="status-menu">
+                            <li>Completed</li>
+                            <li>In Progress</li>
+                            <li>Pending</li>
+
+
+                        </ol>
+                    </li>
+                    <li><a href="#">Sign Out</a></li>
+
+                </ul>
+            </div>
+        </div>
+        <div class="main-container">
+            <div class="title">
+                <h2 class="h2-title">Create Task</h2>
+            </div>
+            <div class="task-form-container">
+                <form>
+                    <div class="group-section">
+                        <label for="title">Title</label>
+                        <input type="text" name="title" id="title">
+                    </div>
+                    <div class="group-section">
+                        <label for="description">Description</label>
+                        <!-- <input type="text" name="description" id="description"> -->
+
+                        <textarea name="description" id="description" cols="30" rows="10" id="description"></textarea>
+                    </div>
+                    <div class="group-section">
+                        <label for="title">Comment</label>
+                        <!-- <input type="text" name="comment" id="comment"> -->
+                        
+                        <textarea name="comment" id="comment" cols="30" rows="10" id="comment"></textarea>
+                    </div>
+                    <div class="form-buttons">
+                        <button type="submit" class="btn-primary create-btn" style="padding: 10px 15px;">Create</button>
+                        <button class="btn btn-warning"  style="padding: 10px 15px;">Reset</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+    </div>
+
+</body>
+<script src="./src/js/createTask.js"></script>
+
+</html>
