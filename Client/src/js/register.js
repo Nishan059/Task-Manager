@@ -49,15 +49,22 @@ registerBtn.addEventListener("click", async () => {
 
     registerUser(server_url,data)
     .then(Userdata => {
-        if(Userdata.err.username){
-            username_warning_action.innerHTML = Userdata.err.username
-           }
-           else if(Userdata.err.firstname ){
-            firstname_warning_action.innerHTML = Userdata.err.firstname
-           }
-           else if(Userdata.err.lastname){
-            lastname_warning_action.innerHTML = Userdata.err.lastname
-           }
+        // console.log(Userdata)
+        if(Userdata.User){
+            window.location = "/"
+        }
+        if(Userdata.err){
+            if(Userdata.err.username){
+                username_warning_action.innerHTML = Userdata.err.username
+               }
+               else if(Userdata.err.firstname ){
+                firstname_warning_action.innerHTML = Userdata.err.firstname
+               }
+               else if(Userdata.err.lastname){
+                lastname_warning_action.innerHTML = Userdata.err.lastname
+               }
+        }
+
     })
 
 

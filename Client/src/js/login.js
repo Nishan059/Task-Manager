@@ -37,6 +37,10 @@ loginBtn.addEventListener("click", async () => {
     password_warning_action.innerHTML = ""
     loginUser(server_url,data)
     .then(Userdata => {
+        console.log(Userdata)
+        if(Userdata.message === "Success" && Userdata.redirect === true){
+            window.location = "/"
+        }
        if(Userdata.error && Userdata.type === "username"){
         username_warning_action.innerHTML = Userdata.error
        }

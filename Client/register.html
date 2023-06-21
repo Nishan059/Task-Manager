@@ -44,12 +44,29 @@
                         </div>
 
                         <button class="form-button">Sign Up</button>
-                        <p>Already have an <a href="#">account?</a></p>
+                        <p>Already have an <a href="./login.html">account?</a></p>
                     </form>
                 </div>
             </div>
         </div>
     </div>
+    <script>
+    const checkAuth = async() => {
+    try {
+        const response = await fetch("http://localhost:8000/api/v1/user");
+        const request = await response.json()
+        console.log(request)
+        if(request.status === "Authenticated" && window.location.pathname === "/register.html"){
+            window.location = "/"
+        }
+        
+    } catch (error) {
+        console.log(error)
+    }
+}
+    checkAuth()
+    </script>
+
 <script src="./src/js/register.js"></script>
 
 </body>

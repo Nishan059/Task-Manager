@@ -56,27 +56,27 @@ getTasks().then(data => {
     }
 })
 
-const sign_out_btn = document.querySelector(".sign_out_btn");
-// console.log(sign_out_btn)
-const logout = async() => {
-    try {
-        const response = await fetch("http://localhost:8000/api/v1/logout-user", {
-            method: "POST",
-            credentials: "include",
-            mode: "cors",  // include, *same-origin, omit
-            headers: {
-              "Content-Type": "application/json",
-              // 'Content-Type': 'application/x-www-form-urlencoded',
-            }
-        })
-        const request = await response.json()
-        console.log(request)
-    } catch (error) {
-        console.log(error)
-    }
-}
+// const sign_out_btn = document.querySelector(".sign_out_btn");
+// // console.log(sign_out_btn)
+// const logout = async() => {
+//     try {
+//         const response = await fetch("http://localhost:8000/api/v1/logout-user", {
+//             method: "POST",
+//             credentials: "include",
+//             mode: "cors",  // include, *same-origin, omit
+//             headers: {
+//               "Content-Type": "application/json",
+//               // 'Content-Type': 'application/x-www-form-urlencoded',
+//             }
+//         })
+//         const request = await response.json()
+//         console.log(request)
+//     } catch (error) {
+//         console.log(error)
+//     }
+// }
 
-sign_out_btn.addEventListener("click", () => {
-    logout()
-})
+// sign_out_btn.addEventListener("click", () => {
+//     logout()
+// })
 

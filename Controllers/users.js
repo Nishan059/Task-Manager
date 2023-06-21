@@ -20,7 +20,7 @@ const get_user = async (req,res) => {
                 }
                 else{
 					user = await Users.findOne({_id: decoded.user_id});
-					res.status(200).json({user:user})
+					res.status(200).json({user:user, status: "Authenticated"})
                 }
             })
         }
@@ -68,7 +68,7 @@ const authenticate_user = async (req,res) => {
         const token = createToken(User._id, MAX_AGE);
 
         res.cookie("user_auth", token, {httpOnly: true, maxAge: MAX_AGE * 1000});
-		res.status(200).json({message: "Success"})
+		res.status(200).json({message: "Success", redirect: true})
         
         
     } catch (error) {
